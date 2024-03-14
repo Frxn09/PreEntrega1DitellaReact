@@ -1,0 +1,14 @@
+#cart_widget span{
+    padding-top: 16px;
+    margin-left: 5px;
+    font-weight: 500;
+}
+#searchButton:hover{
+    background-color: rgb(140, 230, 5);
+    color: black;
+}
+#searchButton{
+    transition: 0.5s;
+    color: whitesmoke;
+    background-color: green;
+}
