@@ -1,12 +1,13 @@
 import { useState, useEffect } from "react";
-import { useParams } from "react-router";
+import { useParams } from "react-router-dom";
 import Container from "react-bootstrap/Container";
 
 import data from "../data/products.json";
 import { ItemList } from "./ItemList";
+
 export const ItemListContainer = () => {
   const [products, setProducts] = useState([]);
-  const { id } = useParams;
+  const { id } = useParams();
 
   useEffect(() => {
     const get = new Promise((resolve, reject) => {
