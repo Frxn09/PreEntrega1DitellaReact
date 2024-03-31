@@ -3,7 +3,7 @@ import Container from "react-bootstrap/Container";
 import Form from "react-bootstrap/Form";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
-import NavDropdown from "react-bootstrap/NavDropdown";
+import { NavLink } from "react-bootstrap";
 
 import { CartWidget } from "./CartWidget";
 
@@ -19,24 +19,17 @@ export const NavBar = () => {
             style={{ maxHeight: "120px" }}
             navbarScroll
           >
-            <NavDropdown title="Categorys" id="navbarScrollingDropdown">
-              <NavDropdown.Item href="#action3">Gold</NavDropdown.Item>
-              <NavDropdown.Item href="#action4">Silver</NavDropdown.Item>
-              <NavDropdown.Item href="#action5">Leather</NavDropdown.Item>
-            </NavDropdown>
-            <CartWidget/>
+            <Nav.Link to="/category/oro" as={NavLink}>
+              Oro
+            </Nav.Link>
+            <Nav.Link to="/category/plata" as={NavLink}>
+              Plata
+            </Nav.Link>
+            <Nav.Link to="/category/cuero" as={NavLink}>
+              Cuero
+            </Nav.Link>
+            <CartWidget />
           </Nav>
-          <Form className="d-flex">
-            <Form.Control
-              type="search"
-              placeholder="Search"
-              className="me-2"
-              aria-label="Search"
-            />
-            <Button id="searchButton" variant="outline-success">
-              Search
-            </Button>
-          </Form>
         </Navbar.Collapse>
       </Container>
     </Navbar>
