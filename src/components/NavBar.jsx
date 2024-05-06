@@ -7,23 +7,21 @@ import { CartWidget } from "./CartWidget";
 
 export const NavBar = () => {
   return (
-    <Navbar expand="lg" className="bg-danger">
+    <Navbar expand="lg" id="navBar">
       <Container fluid>
-        <Navbar.Brand to="/" as={NavLink}>RaddiantBrazalet</Navbar.Brand>
+        <Navbar.Brand className="links" to="/" as={NavLink}>
+          RaddiantBrazalet
+        </Navbar.Brand>
         <Navbar.Toggle aria-controls="navbarScroll" />
         <Navbar.Collapse id="navbarScroll">
-          <Nav
-            className="me-auto my-2 my-lg-0"
-            style={{ maxHeight: "120px" }}
-            navbarScroll
-          >
-            <Nav.Link to="/category/oro" as={NavLink}>
+          <Nav>
+            <Nav.Link className="links" to="/category/oro" as={NavLink}>
               Oro
             </Nav.Link>
-            <Nav.Link to="/category/plata" as={NavLink}>
+            <Nav.Link className="links" to="/category/plata" as={NavLink}>
               Plata
             </Nav.Link>
-            <Nav.Link to="/category/cuero" as={NavLink}>
+            <Nav.Link className="links" to="/category/cuero" as={NavLink}>
               Cuero
             </Nav.Link>
             <CartWidget />

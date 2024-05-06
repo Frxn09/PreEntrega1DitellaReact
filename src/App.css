@@ -7,12 +7,71 @@
   margin-left: 5px;
   font-weight: 500;
 }
-#searchButton:hover {
-  background-color: rgb(140, 230, 5);
+.Cards {
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.card-body{
+  height: 200px;
+}
+.conter {
+  margin-bottom: 25px;
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  max-width: auto;
+}
+.outconter{
+  width: 100%;
+  min-height: 100%;
+}
+#navBar {
+  display: flex;
+  background: #495057;
+  color: white;
+}
+.links {
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+.details {
+  display: flex;
+  justify-content: center;
+  h1 {
+    height: max-content;
+    margin-left: 100px;
+  }
+  .imgs {
+    width: 500px;
+    height: 500px;
+  }
+}
+.price {
+  display: flex;
+  gap: 40px;
+}
+.franco {
+  padding: 5px;
+  font-size: 18px;
+  height: 50px;
+  width: 100%;
+  background-color: #343a40;
+  color: white;
+  text-shadow: 3px 3px black;
+}
+.buton {
+  color: black;
+  border-color: black;
+  transition: 0.4s;
+}
+.buton:hover {
+  background-color: grey;
   color: black;
 }
-#searchButton {
-  transition: 0.5s;
-  color: whitesmoke;
-  background-color: green;
+#franco3 {
+  display: flex;
+  background-color: antiquewhite;
+  color: black;
+  border-color: black;
 }
