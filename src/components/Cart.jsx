@@ -12,7 +12,7 @@ const initialValue = {
 
 export const Cart = () => {
   const [values, setValues] = useState(initialValue);
-  const { clear, items } = useContext(CartContext);
+  const { clear, items, removeItem } = useContext(CartContext);
 
   const total = () =>
     items.reduce((acc, item) => acc + item.quantity * item.price, 0);
@@ -22,6 +22,8 @@ export const Cart = () => {
       return { ...prev, [ev.target.name]: ev.target.value };
     });
   };
+  const handleRemove = (id) => removeItem(id);
+  const handleClear = (id) => clear(id);
 
   const handleSubmit = () => {
     const order = {
@@ -49,14 +51,18 @@ export const Cart = () => {
         <h1>Productos en tu carrito</h1>
         {items.map((i) => {
           return (
-            <ul key={i.name}>
-              <li>Producto {i.name}</li>
-              <li>Cantidad:{i.quantity}</li>
+            <ul key={i.title}>
+              <li>Producto {i.title}</li>
+              <li>Cantidad:{i.stock}</li>
               <li>${i.price}</li>
+              <li onClick={() => handleRemove(i.id)}>X</li>
             </ul>
           );
         })}
         <div>Total: {total()}</div>
+        <Button className="buton" type="button" onClick={handleClear}>
+              Vaciar
+            </Button>
         {items?.length > 0 && (
           <form>
             <lablel>Nombre y Apellido: </lablel>

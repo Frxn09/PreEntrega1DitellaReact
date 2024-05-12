@@ -1,7 +1,13 @@
 import { NavLink } from "react-router-dom";
 import Nav from "react-bootstrap/Nav";
+import { useContext } from "react";
+import { CartContext } from "../contexts/CartContext";
 
 export const CartWidget = () => {
+  const { items } = useContext(CartContext);
+
+  const total = items.reduce((acc, elem) => acc + elem.quantity, 0);
+
   return (
     <Nav.Link className="Links" to="/cart" as={NavLink}>
       <div
@@ -18,7 +24,7 @@ export const CartWidget = () => {
           alt="CartIcon"
           style={{ width: 30, height: 23 }}
         />
-        <span style={{ color: "white" }}>66</span>
+        <span style={{ color: "white" }}>{total}</span>
       </div>
     </Nav.Link>
   );
