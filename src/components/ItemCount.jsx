@@ -3,11 +3,15 @@ import { useState } from "react";
 export const ItemCount = (onAdd, stock) => {
   const [quantity, setQuantity] = useState(1);
   const handleIncrese = () => {
-    if (stock > quantity) setQuantity((prev) => prev + 1);
+    if (stock > quantity) {
+      setQuantity((prev) => prev + 1);
+    }
   };
 
   const handleDecrease = () => {
-    if (quantity > 1) setQuantity((prev) => prev - 1);
+    if (quantity > 1) {
+      setQuantity((prev) => prev - 1);
+    }
   };
   const handleAdd = () => {
     onAdd(quantity);
@@ -21,7 +25,9 @@ export const ItemCount = (onAdd, stock) => {
           -
         </div>
         <input type="number" value={quantity} readOnly style={{ width: 35 }} />
-        <div onClick={handleIncrese} style={{ width: 20 }}>+</div>
+        <div onClick={handleIncrese} style={{ width: 20 }}>
+          +
+        </div>
       </div>
       <Button className="buton" style={{ marginTop: 6 }} onClick={handleAdd}>
         Añadir al carro

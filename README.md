@@ -1,8 +1,11 @@
-# React + Vite
+# Proyecto Franco Ditella
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+#### Origen de la idea
 
-Currently, two official plugins are available:
+Esta surgio al ver a una amiga que vendia brazaletes. Entonces decidi realizar esta aplicacion web orientada a eso mismo, con el 
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+objetivo que ella la pueda utilizar para vender sus productos.
+
+#### Diseño
+
+El diseño lo llevo en constante evolucion aun no tengo muy claro de que colores o formato llevar acabo.
