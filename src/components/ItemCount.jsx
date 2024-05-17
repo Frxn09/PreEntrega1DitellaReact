@@ -21,13 +21,13 @@ export const ItemCount = (onAdd, stock) => {
   return (
     <>
       <div className="d-flex">
-        <div onClick={handleDecrease} style={{ width: 20 }}>
+        <button onClick={handleDecrease} style={{ width: 20 }}>
           -
-        </div>
+        </button>
         <input type="number" value={quantity} readOnly style={{ width: 35 }} />
-        <div onClick={handleIncrese} style={{ width: 20 }}>
+        <button onClick={handleIncrese} style={{ width: 20 }}>
           +
-        </div>
+        </button>
       </div>
       <Button className="buton" style={{ marginTop: 6 }} onClick={handleAdd}>
         Añadir al carro

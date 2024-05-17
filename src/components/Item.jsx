@@ -1,11 +1,8 @@
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
 import { Link } from "react-router-dom";
-import { useContext } from "react";
-import { CartContext } from "../contexts/CartContext";
 
 export const Item = ({ item }) => {
-
   return (
     <div>
       <Card className="Cards" style={{ width: "240px", height: "470px" }}>
