@@ -9,7 +9,7 @@ export const Provider = ({ children }) => {
 
   const removeItem = (id) => {
     const filtered = items.filter((item) => item.id !== id);
-    setItem(filtered);
+    setItems(filtered);
   };
   const addItem = (item, quantity) => {
     const isExists = items.some((i) => i.id === item.id);

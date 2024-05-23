@@ -1,6 +1,6 @@
 import { Button } from "react-bootstrap";
 import { useState } from "react";
-export const ItemCount = (onAdd, stock) => {
+export const ItemCount = ({onAdd, stock}) => {
   const [quantity, setQuantity] = useState(1);
   const handleIncrese = () => {
     if (stock > quantity) {

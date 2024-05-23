@@ -6,8 +6,8 @@ import { CartContext } from "../contexts/CartContext";
 export const ItemDetail = ({ item }) => {
   const { addItem } = useContext(CartContext);
 
-  const onAdd = (quantity) => {
-    onAdd(item, quantity);
+  const add = (quantity) => {
+    addItem(item, quantity);
   };
   return (
     <Container className="mt-4 details">
@@ -19,7 +19,7 @@ export const ItemDetail = ({ item }) => {
         <p>{`Precio: $${item.price}`}</p>
         <br />
         <p>{`Stock: ${item.stock}`}</p>
-        <ItemCount stock={item.stock} onAdd={addItem} />
+        <ItemCount stock={item.stock} onAdd={add} />
       </aside>
     </Container>
   );

@@ -52,8 +52,8 @@ export const Cart = () => {
         {items.map((i) => {
           return (
             <ul key={i.title}>
-              <li>Producto {i.title}</li>
-              <li>Cantidad:{i.stock}</li>
+              <li>Producto: {i.title}</li>
+              <li>Cantidad: {i.stock}</li>
               <li>${i.price}</li>
               <li onClick={() => handleRemove(i.id)}>X</li>
             </ul>
