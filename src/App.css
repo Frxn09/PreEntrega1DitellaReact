@@ -51,11 +51,17 @@
   display: flex;
   gap: 40px;
 }
+#exconter{
+  height: 100%;
+  width: 100%;
+}
 .franco {
+  display: flex;
   padding: 5px;
   font-size: 18px;
   height: 50px;
   width: 100%;
+  justify-content: end;
   background-color: #343a40;
   color: white;
   text-shadow: 3px 3px black;

@@ -42,7 +42,7 @@ export const ItemListContainer = () => {
       <Container className="conter">
         <ItemList items={items} />
       </Container>
-      <footer className="franco">Franco Ditella | ReactJs </footer>
+
     </>
   );
 };

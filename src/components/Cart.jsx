@@ -61,8 +61,8 @@ export const Cart = () => {
         })}
         <div>Total: {total()}</div>
         <Button className="buton" type="button" onClick={handleClear}>
-              Vaciar
-            </Button>
+          Vaciar
+        </Button>
         {items?.length > 0 && (
           <form>
             <lablel>Nombre y Apellido: </lablel>
@@ -92,7 +92,6 @@ export const Cart = () => {
           </form>
         )}
       </Container>
-      <footer className="franco">Franco Ditella | ReactJs </footer>
     </div>
   );
 };
