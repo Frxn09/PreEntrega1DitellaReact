@@ -35,14 +35,16 @@ export const ItemListContainer = () => {
     });
   }, [id]);
 
-  if (!items) return <div>loading</div>;
+  if (!items) return <div className="loading">loading...</div>;
 
   return (
     <>
       <Container className="conter">
         <ItemList items={items} />
       </Container>
-
+      <footer>
+        <p>Franco Ditella | Proyecto ReactJs | 2024</p>
+      </footer>
     </>
   );
 };

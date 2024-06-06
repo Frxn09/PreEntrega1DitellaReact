@@ -20,7 +20,6 @@ export const ItemDetailsContainer = () => {
   return (
     <>
       <ItemDetail item={item} />
-      <footer className="franco">Franco Ditella | ReactJs </footer>
     </>
   );
 };

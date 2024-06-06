@@ -13,12 +13,9 @@ export const Item = ({ item }) => {
           <Card.Text>${item.price}</Card.Text>
           <Link to={`/item/${item.id}`}>
             <Button className="buton" style={{ marginTop: 6, marginRight: 4 }}>
-              🔍
+              Saber más
             </Button>
           </Link>
-          <Button className="buton" style={{ marginTop: 6 }}>
-            Añadir al carro
-          </Button>
         </Card.Body>
       </Card>
     </div>

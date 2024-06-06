@@ -1,11 +1,13 @@
 # Proyecto Franco Ditella
 
-#### Origen de la idea
+### Sobre mi
 
-Esta surgio al ver a una amiga que vendia brazaletes. Entonces decidi realizar esta aplicacion web orientada a eso mismo, con el 
+* Estudie en CoderHouse la carrera de Desarrollador Front-End ReactJs.
+* Sigo estudiando dia a dia para mejorar mi habilidades desarrollando aplicaciones.
+* Lenguajes aprendidos: HTML, CSS, JavaScript, ReactJs.
 
-objetivo que ella la pueda utilizar para vender sus productos.
+### Este repo se trata sobre: Mi proyecto final de ReacJs.
 
-#### Diseño
-
-El diseño lo llevo en constante evolucion aun no tengo muy claro de que colores o formato llevar acabo.
+* Esta aplicacion esta creada con ViteJs.
+* Clonarla: git clone https://github.com/Frxn09/PreEntrega1DitellaReact
+* Para iniciarla, luego de clonar, cd carpeta, ejecute npm i para instalar dependencias y luego npm run dev para arrancar el servidor de desarrollo.

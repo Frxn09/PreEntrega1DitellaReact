@@ -21,11 +21,11 @@ export const ItemCount = ({onAdd, stock}) => {
   return (
     <>
       <div className="d-flex">
-        <button onClick={handleDecrease} style={{ width: 20 }}>
+        <button className="butonmema" onClick={handleDecrease} style={{ width: 20 }}>
           -
         </button>
-        <input type="number" value={quantity} readOnly style={{ width: 35 }} />
-        <button onClick={handleIncrese} style={{ width: 20 }}>
+        <input type="number" className="butonmema" value={quantity} readOnly style={{ width: 35 }} />
+        <button className="butonmema" onClick={handleIncrese} style={{ width: 20 }}>
           +
         </button>
       </div>

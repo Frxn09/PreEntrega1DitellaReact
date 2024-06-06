@@ -45,53 +45,93 @@ export const Cart = () => {
       });
   };
 
+
   return (
     <div id="outconter">
       <Container className="mt-4 cart-conter">
         <h1>Productos en tu carrito</h1>
         {items.map((i) => {
           return (
-            <ul key={i.title}>
-              <li>Producto: {i.title}</li>
-              <li>Cantidad: {i.stock}</li>
-              <li>${i.price}</li>
-              <li onClick={() => handleRemove(i.id)}>X</li>
-            </ul>
+            <div>
+              <table key={i.title} style={{ cellspacing: 30, cellpadding: 60 }}>
+                <tr>
+                  <th>Producto</th>
+                  <th>Nombre</th>
+                  <th>Cantidad</th>
+                  <th>Precio</th>
+                </tr>
+                <tr>
+                  <td>
+                    <img id="produc" src={i.pictureUrl} alt="Producto" />
+                  </td>
+                  <td>{i.title}</td>
+                  <td>{i.quantity}</td>
+                  <td>${i.price}</td>
+                  <td>
+                    <button id="remove" onClick={() => handleRemove(i.id)}>
+                      X
+                    </button>
+                  </td>
+                </tr>
+              </table>
+            </div>
           );
         })}
-        <div>Total: {total()}</div>
-        <Button className="buton" type="button" onClick={handleClear}>
-          Vaciar
-        </Button>
+
         {items?.length > 0 && (
-          <form>
-            <lablel>Nombre y Apellido: </lablel>
-            <input
-              type="text"
-              value={values.name}
-              name="name"
-              onChange={handleChange}
-            />
-            <lablel>Celular: </lablel>
-            <input
-              type="text"
-              value={values.phone}
-              name="phone"
-              onChange={handleChange}
-            />
-            <lablel>Email: </lablel>
-            <input
-              type="email"
-              value={values.email}
-              name="email"
-              onChange={handleChange}
-            />
-            <Button className="buton" type="button" onClick={handleSubmit}>
-              Enviar
+          <div id="totalboton">
+            <div id="total">Total: ${total()}</div>
+            <Button
+              className="buton"
+              id="clear"
+              type="button"
+              onClick={handleClear}
+            >
+              Vaciar
             </Button>
-          </form>
+          </div>
+        )}
+        {items?.length > 0 && (
+          <div>
+            <form id="formulario">
+              <lablel>Nombre y Apellido: </lablel>
+              <input
+                type="text"
+                value={values.name}
+                name="name"
+                onChange={handleChange}
+              />
+              <lablel>Celular: </lablel>
+              <input
+                type="text"
+                value={values.phone}
+                name="phone"
+                onChange={handleChange}
+              />
+              <lablel>Email: </lablel>
+              <input
+                type="email"
+                value={values.email}
+                name="email"
+                onChange={handleChange}
+              />
+            </form>
+            <div>
+              <Button
+                className="buton"
+                id="enviar"
+                type="button"
+                onClick={handleSubmit}
+              >
+                Enviar
+              </Button>
+            </div>
+          </div>
         )}
       </Container>
+      <footer>
+        <p>Franco Ditella | Proyecto ReactJs | 2024</p>
+      </footer>
     </div>
   );
 };
