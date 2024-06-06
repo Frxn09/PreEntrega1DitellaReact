@@ -15,7 +15,7 @@ export const ItemDetailsContainer = () => {
     });
   }, [id]);
 
-  if (!item) return <div>loading</div>;
+  if (!item) return <div className="loading">loading...</div>;
 
   return (
     <>
